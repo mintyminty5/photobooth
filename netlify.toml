@@ -1,0 +1,24 @@
+[build]
+  publish = "."
+
+[functions]
+  node_bundler = "esbuild"
+
+# 다운로드 페이지: /p/아이디 → p.html (주소는 그대로 유지)
+[[redirects]]
+  from = "/p/*"
+  to = "/p.html"
+  status = 200
+
+[[headers]]
+  for = "/p/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+    Referrer-Policy = "no-referrer"
+    Cache-Control = "no-store"
+
+[[headers]]
+  for = "/api/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+    Cache-Control = "no-store"

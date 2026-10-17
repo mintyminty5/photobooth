@@ -1,0 +1,9 @@
+{
+  "name": "life4cut-photobooth",
+  "version": "1.0.0",
+  "private": true,
+  "description": "인생네컷 포토부스 (Minty Lab)",
+  "dependencies": {
+    "@netlify/blobs": "^11.1.4"
+  }
+}
